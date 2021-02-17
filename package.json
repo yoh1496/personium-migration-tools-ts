@@ -4,7 +4,7 @@
   "description": "Tools for updating personium version",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -r ts-node/register test/**/*.ts",
     "debug": "ts-node src/index.ts",
     "clean": "rimraf dist/*",
     "build": "tsc",
@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/yoh1496/personium-migration-tools#readme",
   "devDependencies": {
+    "@types/chai": "^4.2.15",
     "@types/mocha": "^8.2.0",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
+    "chai": "^4.3.0",
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "mocha": "^8.3.0",
